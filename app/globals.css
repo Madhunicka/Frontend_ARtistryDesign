@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #4A47A3;
+  --color-secondary: #FFB26B;
+  --color-background-light: #F8F8FB;
+  --color-background-dark: #1C1B29;
+  --color-text-primary: #1E1E1E;
+  --color-text-secondary: #6F6F6F;
+  --color-accent: #6EC6FF;
+}
+
+:root {
+  --primary: #4A47A3;
+  --secondary: #FFB26B;
+  --background-light: #F8F8FB;
+  --background-dark: #1C1B29;
+  --text-primary: #1E1E1E;
+  --text-secondary: #6F6F6F;
+  --accent: #6EC6FF;
+}
+
+body {
+  color: var(--text-primary);
+  background: var(--background-light);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Component Classes */
+.btn-primary {
+  @apply bg-[#4A47A3] text-white px-6 py-2.5 rounded-lg font-medium shadow-md hover:shadow-lg hover:bg-[#3d3a8a] transition-all duration-300;
+}
+
+.btn-secondary {
+  @apply bg-white text-[#4A47A3] border border-[#4A47A3] px-6 py-2.5 rounded-lg font-medium hover:bg-[#f0f0ff] transition-all duration-300;
+}
+
+.card {
+  @apply bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100;
+}
+
+.heading-bold {
+  @apply font-bold text-[#1E1E1E];
+}
+
+.text-body {
+  @apply font-normal text-[#6F6F6F];
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
